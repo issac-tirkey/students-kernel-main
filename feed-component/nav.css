@@ -1,0 +1,154 @@
+/*TOP AND SIDE NAV CSS FILE*/
+
+/*TOP NAVIGATION */
+nav {
+  position: fixed;
+  background: #eff6e0;
+  height: 50px;
+  top: 0%;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 0px 0 1px 2px #0d183e63;
+  box-sizing: border-box;
+}
+label.logo {
+  color: #0d183e;
+  font-size: 28px;
+  line-height: 50px;
+  padding: 0 30px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 50px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0d183e;
+  font-size: 17px;
+  text-transform: uppercase;
+  display: block;
+  padding: 0px 17px;
+  border-radius: 1px;
+}
+
+li a.active,
+li a:hover {
+  background: #0d183ed5;
+  transition: 0.5s;
+  border-radius: 7%;
+  color: white;
+  text-decoration: none;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #0d183e;
+  float: left;
+  line-height: 50px;
+  margin-left: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+/*SIDE NAVIGATION*/
+.searchbar {
+  margin-top: 10%;
+  margin-bottom: 30%;
+}
+#searchpanel {
+  z-index: 10;
+  position: absolute;
+  width: 110%;
+  display: inline-block;
+  font-size: 17px;
+  height: 5vh;
+  border-radius: 12px;
+  margin-left: -45%;
+  border: none;
+  box-shadow: 0 0 2px 0 #1d1d1d;
+  outline: none;
+  background-color: #4667b1;
+}
+#searchpanel::placeholder {
+  color: rgba(255, 255, 255, 0.514);
+  padding: 5%;
+}
+input[type="text"] {
+  padding: 10%;
+}
+#submitbtn {
+  z-index: 200;
+  position: relative;
+  right: -35%;
+  display: inline;
+  padding: 8px 8px;
+  font-size: 17px;
+  border: 1px #1d1d1d;
+  cursor: pointer;
+  background-color: #35726600;
+}
+#check {
+  display: none;
+}
+
+.sidebar {
+  width: 20%;
+  position: absolute;
+  height: 100vh;
+  background: #0d183eda;
+  font-size: 0.65em;
+  left: 0%;
+  border-radius: 8px;
+}
+
+.sidebar ul {
+  position: relative;
+  margin: 0 15%;
+  text-align: center;
+  top: 7%;
+  font-weight: bold;
+  list-style: none;
+  justify-content: center;
+}
+
+.sidebar li {
+  position: relative;
+  margin: 15% 0;
+}
+
+.sidebar a {
+  line-height: 5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4em;
+  color: #a3b3d3;
+  display: block;
+  font-size: 15px;
+  font-weight: bolder;
+  transition: all ease-out 300ms;
+}
+
+.sidebar a:not(.active)::after {
+  opacity: 0.2;
+}
+
+.sidebar a:not(.active):hover {
+  background-color: #4668b18c;
+  color: white;
+}
+
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2em;
+  background: black;
+  left: 0;
+  bottom: 0;
+}

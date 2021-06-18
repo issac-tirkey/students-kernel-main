@@ -1,0 +1,266 @@
+/*POST */
+.post {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10;
+  width: 40%;
+  right: 90%;
+  left: 28.5%;
+  border-radius: 5px;
+  margin-top: 10px;
+  flex: 0.6;
+  background-color: white;
+  border: 1px solid lightgrey;
+}
+.post-component {
+  display: flex;
+  align-items: center;
+}
+.post-component h5 {
+  margin-top: 5%;
+  margin-left: 8%;
+  cursor: pointer;
+  font-size: 15px;
+}
+.post-component h5:hover {
+  text-decoration: underline;
+}
+
+.post-component small {
+  margin-top: 4%;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  color: #3b3b3b;
+}
+.post-component i {
+  display: flex;
+  position: relative;
+  left: 5%;
+  margin-top: 4%;
+  font-size: 35px;
+}
+.post-body {
+  display: flex;
+  flex-direction: column;
+}
+.post-body .post-ques {
+  margin-top: 10px;
+  margin-left: 5%;
+  font-weight: 900;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+}
+.post-body .post-ques p:hover {
+  text-decoration: underline;
+}
+.post-body img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.post-ques .ansbtn {
+  margin-left: auto;
+  padding: 10px 24px 10px 20px;
+  margin-right: 3%;
+  outline: none;
+  border: none;
+  background-color: #0d183eda;
+  color: white;
+  border-radius: 30px;
+}
+.post-ques .ansbtn:hover {
+  background-color: #04193b;
+  color: white;
+}
+.postfooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 2%;
+}
+.postfooter i {
+  font-size: 25px;
+  color: rgb(44, 44, 44);
+  margin-right: 30px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+.post-vote {
+  margin-left: 3%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 33px;
+  padding: 5px;
+  align-items: center;
+}
+.post-vote i {
+  color: grey;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.post-vote i:hover {
+  color: #04193b;
+}
+#upvote {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  margin-left: -35%;
+  outline: none;
+}
+#upvote:active {
+  color: #04193b;
+  transform: scale(1.2);
+}
+#upvotenum {
+  border: none;
+  width: 40px;
+  margin-left: -45%;
+  font-size: 20px;
+  font-weight: bold;
+}
+#downvote {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  margin-left: -20%;
+  outline: none;
+}
+#downvote:active {
+  color: #04193b;
+  transform: scale(1.2);
+}
+#downvotenum {
+  border: none;
+  width: 40px;
+  margin-left: -26%;
+  font-size: 20px;
+  font-weight: bold;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*POST MODAL*/
+
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 0.05%;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.bg-modal .modal-content {
+  position: fixed;
+  width: 50%;
+  height: 400px;
+  background-color: white;
+  top: 20%;
+  border-radius: 4px;
+}
+.bg-modal .modal-content #linkicon {
+  left: 1%;
+}
+.urlinput {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #3b3b3b;
+}
+/*ANSWER MODAL*/
+.ans-modal {
+  width: 100%;
+  height: 150vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  margin-left: 0.05%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+.ans-modal .modal-content {
+  position: fixed;
+  width: 50%;
+  height: 400px;
+  background-color: white;
+  top: 20%;
+  border-radius: 4px;
+}
+
+.modal-content .txtfield {
+  position: relative;
+  top: 10%;
+  left: 5%;
+  width: 80%;
+  height: 50;
+  word-spacing: 15px;
+}
+.txtfield #input {
+  color: #0d183e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+.txtfield #input:hover {
+  outline: 1px solid #474747;
+}
+.btn-post button {
+  background-color: #102c55dc;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btn-post button:hover {
+  background-color: #04193b;
+  color: white;
+}
+.btn-post {
+  position: relative;
+  top: 13%;
+  left: 40%;
+  word-spacing: 15px;
+}
+
+.modal-content h2 {
+  position: relative;
+  top: 5%;
+  left: 35%;
+  font-size: 25px;
+  font-weight: 500;
+}
+.modal-content i {
+  position: relative;
+  color: black;
+  top: -73%;
+  left: 95%;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}

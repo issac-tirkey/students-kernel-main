@@ -1,0 +1,180 @@
+@import url("feed-component/nav.css");
+@import url("feed-component/profilecard.css");
+@import url("feed-component/feedtopquestionbar.css");
+@import url("feed-component/feedpost.css");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "HelveticaNeue";
+  background-color: rgb(241, 241, 241);
+  height: 100%;
+  position: relative;
+  overflow: auto;
+}
+html {
+  height: 100%;
+}
+
+/*MEDIA QUERY*/
+
+@media (max-width: 1150px) {
+  .profile-card {
+    width: 280px;
+    height: 600px;
+    right: 0;
+    top: 10%;
+  }
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+  .sidebar a {
+    font-size: 10px;
+  }
+  .sidenav {
+    width: 160px;
+  }
+
+  #searchpanel {
+    width: 110%;
+    left: 35px;
+  }
+  #submitbtn {
+    right: -35%;
+    padding: 10px 10px;
+    justify-content: center;
+  }
+  .profile-card {
+    width: 250px;
+    height: 700px;
+    right: 0;
+    top: 10%;
+  }
+}
+
+/*MEDIA QUERY 2 */
+@media (max-width: 858px) {
+  label.logo {
+    font-size: 25px;
+    display: block;
+    text-align: center;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    color: #0d183e;
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    top: 50px;
+    left: -100%;
+    text-align: center;
+    z-index: 400;
+  }
+  nav ul li {
+    background-color: #e0dfdfec;
+    display: block;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .searchbar {
+    margin-top: 10%;
+  }
+  #searchpanel {
+    position: absolute;
+    width: 120px;
+    display: inline-block;
+    font-size: 10px;
+    height: 5vh;
+    left: 50%;
+  }
+  #submitbtn {
+    left: 35%;
+    border-radius: 30%;
+  }
+
+  .sidebar {
+    display: none;
+    width: 20%;
+    height: 100vh;
+  }
+
+  .sidebar ul {
+    margin: 0 15%;
+    left: -10%;
+    width: 80%;
+  }
+
+  .sidebar li {
+    position: relative;
+    margin: 10% 0;
+  }
+
+  .sidebar a {
+    line-height: 5em;
+    letter-spacing: 0.4em;
+  }
+  .sidebar a::after {
+    width: 70%;
+    height: 0.2em;
+    left: 15%;
+    bottom: 0;
+  }
+  section {
+    margin-right: 20%;
+  }
+  .profile-card {
+    width: 200px;
+    height: 700px;
+    right: 0;
+    top: 10%;
+  }
+  .question-box {
+    width: 65%;
+    margin-left: -25%;
+  }
+  .post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10;
+    width: 65%;
+    left: 5%;
+  }
+}
+@media (max-width: 620px) {
+  .profile-card {
+    display: none;
+  }
+  .question-box {
+    width: 80%;
+    margin-left: 0%;
+  }
+  .post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10;
+    width: 80%;
+    left: 10%;
+  }
+}

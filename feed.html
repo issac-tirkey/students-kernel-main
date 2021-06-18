@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>feed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="feed.css">
+</head>
+
+<!--TOP NAVIGATION-->
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo">Student's Kernel</label>
+      <ul>
+        <li><a class="active" href="#"><i class="fa fa-newspaper"></i></a></li>
+        <li><a href="profile.html"><i class="fa fa-users"></i></a></li>
+        <li><a href="#"> <i class="fa fa-sign-out" id="logout"></i></a></li>
+      </ul>
+    </nav>
+
+
+
+<!--SIDE NAVIGATION-->
+    <main class="main">
+      <aside class="sidebar">
+          <ul>
+            <div class="searchbar">
+            <input id="searchpanel" type="text" placeholder="Search.."></input>
+            <button id="submitbtn" type="submit"><i class="fa fa-search"></i></button>
+          </div>
+            <li><a href="#">My Notes</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">Following</a></li>
+            <li><a href="#">Courses</a></li>
+          </ul>
+      </aside>
+    </main>
+
+
+
+  <!--FEED QUESTION BOX TOP-->
+    <div class="feed">
+      <div id="question-box" class="question-box" role="button" onclick="modalfunc()">
+        <div class="info">  
+          <i class="fa fa-user-circle"></i>
+          <h6>Username</h>
+        </div>
+        <div class="question">
+
+         <!-- <p>What is your Question?</p>-->
+          <!-- <input type="text" id="topbox" placeholder="Enter your question "></input>
+         <button id="askquestionbtn">Add question</button>-->
+        </div>
+    </div> 
+  </div>
+
+
+
+    <!--QUESTION MODAL-->
+    <div id="ques-modal"class="ques-modal">
+      <div class="modal-content">
+        <h2>enter your question:</h2>
+        <div class="txtfield" >
+          <form action="">
+          <textarea name="text" id="input" cols="80" rows="1" placeholder="Ask a Question "></textarea>
+          <i id="linkicon" class="fa fa-link"></i>
+          <input class="urlinput" type="url" placeholder="Share a link(optional)"></input>
+        </form>
+        <!--<input type="text" placeholder="enter text here">-->
+        </div>
+        <div class="btn-post" >
+          <button>Submit</button>
+          </div>
+        <i id="close1" class="fa fa-times"></i>
+      </div>
+    </div> 
+
+
+
+  <!--FEED POST QUESTION ANSWER -->
+  <div class="post">
+    <div class="post-component">
+      <i class="fa fa-user-circle"></i>
+      <div class="img">
+        <img src="" alt="">
+      </div>
+        <h5>Username</h5>
+        <small>timestamp </small>
+      
+    </div>
+
+    <div class="post-body">
+         <div class="post-ques">
+           <p>Question</p>
+           <button class="ansbtn" id="ansbtn">Answer</button>
+         </div>
+         <div class="ans">
+           <p></p>
+         </div>
+         <img src="img/exp.jpg" alt="">
+    </div>
+
+    <div class="postfooter">
+       <div  class="post-vote">
+        <button id="upvote">
+          <i id="postvote1" class="fa fa-arrow-up"></i>
+        </button>
+        <input type="number" id="upvotenum" value="0">
+        <button id="downvote">
+        <i id="postvote2" class="fa fa-arrow-down"></i>
+        <input type="number" id="downvotenum" value="0">
+      </button>
+      </div>
+        <i class="fa fa-comment-alt"></i>
+       
+    </div>
+  </div>
+ <!--FEED POST QUESTION ANSWER -->
+ <!--
+ <div class="post">
+  <div class="post-component">
+    <i class="fa fa-user-circle"></i>
+    <div class="img">
+      <img src="" alt="">
+    </div>
+      <h5>Username</h5>
+      <small>timestamp </small>
+    
+  </div>
+  <div class="post-body">
+       <div class="post-ques">
+         <p>Question</p>
+         <button class="ansbtn" id="ansbtn">Answer</button>
+       </div>
+       <div class="ans">
+         <p></p>
+       </div>
+       <img src="img/exp.jpg" alt="">
+  </div>
+  <div class="postfooter">
+     <div  class="post-vote">
+      <button  onclick="vote()" id="upvote">
+        <i id="postvote1" class="fa fa-arrow-up"></i>
+      </button>
+      <input type="number" id="upvotenum" value="0">
+      <button id="downvote">
+      <i id="postvote2" class="fa fa-arrow-down"></i>
+      <input type="number" id="downvotenum" value="0">
+    </button>
+    </div>
+      <i class="fa fa-comment-alt"></i>
+     
+  </div>
+</div>
+-->
+
+  <!--POST MODAL-->
+  <div class="bg-modal">
+    <div class="modal-content">
+      <h2>enter your post:</h2>
+      <div class="txtfield" >
+        <form action="">
+        <textarea name="text" id="input" cols="80" rows="8" placeholder="enter your post here "></textarea>
+        <i id="linkicon" class="fa fa-link"></i>
+          <input class="urlinput" type="url" placeholder="Share a link(optional)"></input>
+      <!--<input type="text" placeholder="enter text here">-->
+    </form>
+      </div>
+      <div class="btn-post" >
+        <button>Submit</button>
+        </div>
+      <i id="close" class="fa fa-times"></i>
+    </div>
+  </div> 
+
+
+
+    <!--ANSWER MODAL-->
+    <div class="ans-modal">
+      <div class="modal-content">
+        <h2>enter your answer:</h2>
+        <div class="txtfield" >
+          <textarea name="text" id="input" cols="80" rows="8" placeholder="enter your answer here"></textarea>
+        <!--<input type="text" placeholder="enter text here">-->
+        </div>
+        <div class="btn-post" >
+          <button>Submit</button>
+          </div>
+        <i id="close2" class="fa fa-times"></i>
+      </div>
+    </div> 
+
+
+
+  
+<!--RIGHT PROFILE CARD1-->
+      <div class="profile-card">
+          <div class="card-header">
+            <div class="pic">
+              <img src="img\profile.png" alt="">
+            </div>
+            <div class="name">Shireen g</div>
+            <div class="bio">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+            <a href="#" class="postbtn" id="postbtn">Post</a>
+            </div>
+            <div class="card-footer">
+                <div class="number">
+                  <div class="item">
+                    <span>20</span>
+                    Posts
+                  </div>
+                  <div class="item">
+                    <span>2</span>
+                    Following
+                  </div>
+                  <div class="item">
+                    <span>0</span>
+                    Followers
+                  </div>
+                </div>
+            </div>
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>                <!---app core functionality of firebase-->
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+      
+      <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyD2rPXVG5qMojc63yU9xgUluh_iSMdBrbg",
+            authDomain: "dummy-c18d0.firebaseapp.com",
+            projectId: "dummy-c18d0",
+            appId: "1:707547994436:web:d3f043b34f57e7f605df11"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        
+          //auth and firestore references
+        
+          const auth = firebase.auth();
+          const db = firebase.firestore();
+        
+          db.settings({ timestampsInSnapshots: true});
+        
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="scripts/feed.js"></script>
+      <script src="./scripts/auth.js"></script>
+  </body>
+</html>
